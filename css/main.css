@@ -236,6 +236,7 @@ footer p {
     text-align: center;
     color: white;
     padding: 20px 0;
+    font-family: 'JaneAusten';
 }
 
 .main {
@@ -250,10 +251,10 @@ footer p {
     content: '';
     z-index: -2;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     bottom: 0;
     background-image: url('../img/footer.jpg') ;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom center; 
 }
@@ -271,6 +272,10 @@ footer p {
 .lead-content {
     margin-left: auto;
     margin-right: auto;
+}
+
+.lead-content p {
+    font-style: italic;
 }
 
 .main-content {
@@ -358,12 +363,6 @@ table.harmonogram tr td:first-child {
     border-radius: 10px;
     padding: 15px;
     background: #fff;
-    width: calc(50% - 20px);
-    display: inline-block;
-}
-
-.contacts .contact:nth-child(even) {
-    margin-right: 0;
 }
 
 .contacts .contact:last-child {
@@ -400,7 +399,7 @@ table.harmonogram tr td:first-child {
     }
 
     .lead-content {
-        font-size: 50px;
+        font-size: 18px;
         text-align: center;
         max-width: 800px;
     }
@@ -412,6 +411,16 @@ table.harmonogram tr td:first-child {
 
     .timeline .timeline-item::before {
         left: -45px;
+    }
+
+    .contacts .contact {
+        padding: 25px;
+        width: calc(50% - 20px);
+        display: inline-block;
+    }
+    
+    .contacts .contact:nth-child(even) {
+        margin-right: 0;
     }
 }
 
