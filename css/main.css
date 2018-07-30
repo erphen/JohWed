@@ -120,6 +120,11 @@ textarea {
     font-size: 14px;
 }
 
+.normal {
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
 
 html {
     box-sizing: border-box;
@@ -136,6 +141,40 @@ body {
     margin: 0;
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'JaneAusten';
+}
+h3 {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'JaneAusten';
+    text-align: center;
+    margin: 40px 0 50px 0;
+}
+a {
+    color: #ffbf00;
+}
+strong {
+    color: #ffbf00;
+}
+table {
+    border-collapse: collapse;
+}
+table td {
+    vertical-align: top;
+}
+table td:first-child {
+    padding-left: 0;
+}
+.u-mb-20 {
+    margin-bottom: 20px;
+}
+.u-pb-20 {
+    padding-bottom: 20px;
 }
 
 header {
@@ -189,33 +228,62 @@ header .place {
     bottom: 40px;
 }
 
-#main {
-    width: 100%;
+footer {
+    position: relative;
 }
 
-#main .lead {
-    font-size: 28px;
-    margin: 0 0 60px;
+footer p {
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
+.main {
+    width: 100%;
+    min-height: 90vw;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.main::after, footer::after {
+    position: absolute;
+    content: '';
+    z-index: -2;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    background-image: url('../img/footer.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center; 
+}
+
+.lead {
+    margin: 0 0 30px;
     position: relative;
     width: 100%;
     padding: 30px 20px;
-    font-weight: bold;
     border-top: 1px solid #b9d9eb;
     border-width: 1px 0;
     text-align: center;
 }
 
-#main .lead-content {
+.lead-content {
     margin-left: auto;
     margin-right: auto;
 }
 
+.main-content {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .timeline {
-    margin: 0 20px 20px 10px;
+    margin-bottom: 20px;
 }
 
 .timeline .timeline-item {
-    margin-left: 40px;
+    margin-left: 30px;
     margin-bottom: 20px;
     position: relative;
     border: 1px solid #b9d9eb;
@@ -243,27 +311,74 @@ header .place {
     left: -35px;
 }
 
-footer {
-    width: 100%;
-    height: 100px;
+.more-info {
+    margin-bottom: 0;
+    padding: 40px 0 80px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'JaneAusten';
+}
+
+.more-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.other {
+    margin-bottom: 60px;
     position: relative;
 }
 
-footer::after {
-    position: absolute;
-    content: '';
-    z-index: -1;
-    width: 100%;
-    height: 80vw;
-    bottom: 0;
-    background-image: url('../img/footer.jpg') ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center; 
+.other:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 40px;
+}
+
+table.harmonogram {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.harmonogram tr td:first-child {
+    width: 60px;
+}
+
+.contacts h4 {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'JaneAusten';
+    margin: 0 0 5px;
+}
+
+.contacts .contact {
+    margin: 0 20px 20px 0;
+    border: 1px solid #b9d9eb;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fff;
+    width: calc(50% - 20px);
+    display: inline-block;
+}
+
+.contacts .contact:nth-child(even) {
+    margin-right: 0;
+}
+
+.contacts .contact:last-child {
+    margin-bottom: 0;
+}
+
+.contacts p {
+    margin: 0 0;
 }
 
 @media only screen and (min-width: 900px) {
     body  {
+        font-size: 18px;
+    }
+    .normal {
         font-size: 18px;
     }
     header .cite {
@@ -278,20 +393,21 @@ footer::after {
         font-size: 26px;
     }
 
-    #main .main-content {
+    .main-content {
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    #main .lead-content {
-        font-size: 36px;
+    .lead-content {
+        font-size: 50px;
         text-align: center;
         max-width: 800px;
     }
 
     .timeline .timeline-item {
         padding: 25px;
+        margin-bottom: 40px;
     }
 
     .timeline .timeline-item::before {
